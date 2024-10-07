@@ -1220,50 +1220,7 @@ color: #ffffff;
     body{
         background-color: #0d0d0d;
     }
-    .esconder{
-        display: none;
-    }
 </style>
-<script type="text/javascript">
-    var SECONDS_TO_DISPLAY = 10;
-    var CLASS_TO_DISPLAY = ".esconder";
-
-    var elsHiden = document.querySelectorAll(CLASS_TO_DISPLAY);
-    var elsHidenArr = [];
-    setTimeout(function () {
-        elsHidenArr = Array.prototype.slice.call(elsHiden);
-    }, 0);
-
-    var showEls = function () {
-        for (i = 0; i < elsHidenArr.length; i++) {
-            elsHidenArr[i].style.display = "block";
-            $('html, body').animate({
-                scrollTop: $('#firstPackage').offset().top
-            }, 1000);
-        }
-    }
-
-    var elsDisplayed = false;
-    var startWatchVideoProgress = function () {
-        if (typeof vturb === 'undefined') {
-            setTimeout(function () { startWatchVideoProgress() }, 500);
-            return;
-        }
-
-        vturb.onceTime(SECONDS_TO_DISPLAY, function() {
-            showEls();
-            elsDisplayed = true;
-            localStorage.setItem('alreadyElsDisplayed', true);
-        });
-    }
-
-    var alreadyElsDisplayed = localStorage.getItem('alreadyElsDisplayed');
-    if (alreadyElsDisplayed == 'true') {
-        setTimeout(function () { showEls(); }, 100);
-    } else {
-        startWatchVideoProgress();
-    }
-</script>
 
 <footer class="footer-pBmpic3094525-element">
 <p><strong>Copyright 2023 – Árboles Frutales en Maceta ®</strong></p>
@@ -1284,23 +1241,7 @@ color: #ffffff;
 </footer></div>
 </div>
 </div>
-<!-- Meta Pixel Code -->
-<script>
-  !function(f,b,e,v,n,t,s)
-  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-  n.queue=[];t=b.createElement(e);t.async=!0;
-  t.src=v;s=b.getElementsByTagName(e)[0];
-  s.parentNode.insertBefore(t,s)}(window, document,'script',
-  'https://connect.facebook.net/en_US/fbevents.js');
-  fbq('init', '1953827311644312');
-  fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1953827311644312&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Meta Pixel Code -->
+
 <script src="js/iBFlMR7631811.js" charset="utf-8"></script>
 </body>
 </html>
